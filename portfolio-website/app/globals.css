@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+    .navbar { /* Proeprties of navigation bar at the top */
+        @apply fixed top-0 right-0 w-[100vw] justify-end h-16 m-0 flex flex-row 
+        bg-background text-white font-[family-name:var(--font-roboto-mono)];
+    }
+
+    .topnav-item {
+        @apply relative flex items-center justify-center mx-5 
+        text-white hover:text-tiel;
+    }
+}
