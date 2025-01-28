@@ -4,13 +4,26 @@
 
 @layer components {
 
-    .navbar { /* Proeprties of navigation bar at the top */
-        @apply fixed top-0 right-0 w-[100vw] justify-end h-16 m-0 flex flex-row 
-        bg-background text-white font-[family-name:var(--font-roboto-mono)];
+    .navbar { /* Navigation Bar at the top */
+        @apply flex justify-end items-center w-full py-[30px] px-[2%];
+    }
+    
+    .navbar-logo { /* Nav Bar logo */
+        @apply cursor-pointer mr-auto;
+    }
+    
+    .navbar-link { /* Links in Nav Bar */
+        @apply py-0 pl-[40px]
+        text-white duration-100 font-[family-name:var(--font-roboto-mono)]
+        ease-in-out hover:text-tiel;
     }
 
-    .topnav-item {
-        @apply relative flex items-center justify-center mx-5 
-        text-white hover:text-tiel;
+    .page-title { /* Page titles */
+        @apply font-[family-name:var(--font-roboto-mono)] text-[25px] text-tiel;
     }
+
+    .page-bounds { /* Page bounds */
+        @apply flex-col justify-start py-[30px] px-[10%]
+    }
+
 }

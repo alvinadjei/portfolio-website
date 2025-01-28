@@ -1,3 +1,7 @@
 export default function Page() {
-    return <p>Contact</p>;
+    return (
+        <div className="page-bounds">
+            <h1 className="page-title">contact</h1>
+        </div>
+    );
 }

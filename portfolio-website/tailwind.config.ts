@@ -10,7 +10,7 @@ export default {
     extend: {
       colors: {
         background: '#000e1a',
-        tiel: '#00c4a4',
+        tiel: '#1bfad5',
         lightgrey: '#c5c6c7',
       },
     },
