@@ -1,6 +1,11 @@
-import Link from "next/link";
+'use client';
 
-const links = ["home", "about", "projects", "contact"]
+import Link from "next/link";
+import { usePathname } from 'next/navigation';
+import clsx from 'clsx';
+
+
+const links = ["about", "projects", "contact"]
 
 // TODO: Implement for loops w/ items
 
@@ -21,18 +26,22 @@ export default function NavBar() {
 }
 
 function NavBarLinks() {
+    const pathname = usePathname();
+    console.log(pathname)
     return (
         <ul className="flex">
-            <li><NavBarLink link='about' /></li>
-            <li><NavBarLink link='projects' /></li>
-            <li><NavBarLink link='contact' /></li>
+            {links.map((link, index) => {
+                return (
+                    <li key={index}><NavBarLink link={link} pathname={pathname}  /></li>
+                );
+            })}
         </ul>
     );      
 }
 
-const NavBarLink = ({ link }) => (
+const NavBarLink = ({ link, pathname }) => (
     <Link 
-        className="navbar-link"
+        className={clsx("navbar-link", {'text-tiel':'/'+link === pathname})}
         href={`/${link}`}
     >
         {link}
