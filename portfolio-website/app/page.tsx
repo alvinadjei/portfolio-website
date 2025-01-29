@@ -13,8 +13,8 @@ export default function Page() {
             Alvin Adjei.
           </div>
           <p className="text-2xl text-lightgrey">
-            I'm a full stack<br />
-            software engineer.
+            I'm a<br />
+            full stack software engineer {/*(biomedical engineer, musician, hot sauce enthusiast, honeydew protester, all-around stand-up guy)*/}
           </p>
         </div>
 

@@ -19,11 +19,15 @@
     }
 
     .page-title { /* Page titles */
-        @apply font-[family-name:var(--font-roboto-mono)] text-[25px] text-tiel;
+        @apply flex justify-start font-[family-name:var(--font-roboto-mono)] text-[25px] text-tiel mb-[10px];
+    }
+
+    .page-title-line {
+        @apply h-px my-1 bg-emerald-900 border-0 w-[25vw];
     }
 
     .page-bounds { /* Page bounds */
-        @apply flex-col justify-start py-[30px] px-[10%]
+        @apply flex flex-col w-auto py-[30px] px-[10%]
     }
 
 }
