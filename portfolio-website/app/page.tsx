@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import TypingEffect from "@/app/ui/hero/title_typing";
 import '@/app/ui/global.css';
 
 export default function Page() {
@@ -7,26 +8,24 @@ export default function Page() {
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
         
-        <div className="text-white text-for text-center sm:text-left font-[family-name:var(--font-roboto-mono)]">
+        <div className="text-white text-for text-center font-[family-name:var(--font-roboto-mono)]">
           <span className="text-tiel text-xs">Hi there! My name is</span>
-          <div className="text-6xl font-[family-name:var(--font-roboto-sans)]">
-            Alvin Adjei.
+          <div className="pb-2 text-6xl font-[family-name:var(--font-roboto-sans)]">
+            Alvin Adjei
           </div>
-          <p className="text-2xl text-lightgrey">
-            I'm a<br />
-            full stack software engineer {/*(biomedical engineer, musician, hot sauce enthusiast, honeydew protester, all-around stand-up guy)*/}
-          </p>
-        </div>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
+          <div>
+            <TypingEffect />
+          </div>
+        <div className="flex justify-center pt-10 items-center gap-4">
           <Link
-            className="rounded-3xl hover:rounded-xl border border-solid border-black/[.08] dark:border-white/[.145] transition-all duration-300 ease-linear flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
+            className="rounded-3xl hover:rounded-xl border border-solid border-white/[.145] hover:border-tiel transition-all duration-300 ease-linear flex items-center justify-center text-sm sm:text-base hover:text-tiel h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
             href="/about"
             target=""
             rel="noopener noreferrer"
           >
             Let me show you around!
           </Link>
+        </div>
         </div>
       </main>
       {/* <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
