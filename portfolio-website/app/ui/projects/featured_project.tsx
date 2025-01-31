@@ -5,7 +5,7 @@ import { FiGithub, FiExternalLink } from "react-icons/fi";
 
 export default function FeaturedProject({ title, description, technologies, links, image }) {
     return (
-        <div className="flex text-lightgrey">
+        <div className="text-lightgrey">
             <a
                     className="hover:text-tiel"
                     href={links[0]}
@@ -23,7 +23,7 @@ export default function FeaturedProject({ title, description, technologies, link
                     />
                 
             </div></a>
-            <div className="relative left-[15%] bottom-0">
+            <div className="absolute left-[15%] bottom-0">
                 <ProjectTitle title={title} links={links}/>
                 <ProjectDescription description={description}/>
                 <ProjectTechnologies technologies={technologies}/>
@@ -47,7 +47,7 @@ const ProjectTitle = ({ title, links }) => (
 );
 
 const ProjectDescription = ({ description }) => (
-    <div className="bg-lightbg max-w-[30vw] p-[20px] rounded-md shadow-sm">
+    <div className="bg-lightbg w-[400px] p-[20px] rounded-md shadow-sm hover:shadow-lg">
         {description}
     </div>
 );

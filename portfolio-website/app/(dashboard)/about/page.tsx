@@ -22,7 +22,7 @@ export default function Page() {
                         <p>
                             Hello! I'm Alvin, and (depending on who you ask) I am a software engineer, biomedical engineer, neuroscientist, 
                             and/or musician. I enjoy wearing a lot of different hats, tackling interesting problems, and learning by doing and building.
-                            Some of the technologies, languages and frameworks I have used to do so are on the right.
+                            Some of the technologies, languages, and frameworks I have used to do so are on the right.
                         </p>
                         <br/>
                         <p>
@@ -46,9 +46,15 @@ export default function Page() {
                         <br/>
                         <p>
                             In my free time I enjoy scoring own-goals in my Volo soccer league, 
-                            cooking various types of soup, letting my roommmates win at Mario Kart
-                            (when they develop a false sense of security, I'll crush their spirits),
-                            and exploring nature in and around San Francisco.
+                            cooking various types of soup, letting my roommmates think I'm bad at Mario Kart
+                            (for now), singing in&nbsp;
+                            <a
+                                href="https://www.instagram.com/vocalchordsatucsf/"
+                                target="_blank"
+                                className="underline text-tiel hover:text-emerald-400"
+                            >UCSF's a cappella group, the Vocal Chords
+                            </a>, 
+                            and exploring nature in and around San Francisco in the hopes of catching and taming a coyote.
                         </p>
                     </div>
                 </div>
