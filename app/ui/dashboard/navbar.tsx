@@ -16,7 +16,7 @@ export default function NavBar() {
                 className="navbar-logo"
                 href="/"
             >
-                Logo
+                Home
             </Link>
             <nav className="">
                 <NavBarLinks />

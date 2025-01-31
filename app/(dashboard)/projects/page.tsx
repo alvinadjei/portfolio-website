@@ -1,7 +1,5 @@
 import FeaturedProject from "@/app/ui/projects/featured_project";
-import { proj1, proj2, proj3, proj4, proj5, proj6 } from "../../ui/projects/project_consts";
-
-const projects = [proj1, proj2, proj3, proj4, proj5, proj6];
+import { projects } from "../../ui/projects/project_consts";
 
 export default function Page() {
     return (
