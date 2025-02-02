@@ -4,11 +4,11 @@ import Image from "next/image";
 
 export default function Page() {
     return (
-        <div className="page-bounds"> {/* flex column containing all page elements */}
+        <div className="lg:block flex flex-col items-center"> {/* flex column containing all page elements */}
             <h1 className="page-title">about me </h1>
             <hr className="page-title-line"></hr>
-            <div className="flex justify-evenly py-10"> {/* row[column(profile pic + bio), technologies grid] */}
-                <div className="flex flex-col items-center flex-wrap justify-center max-w-[33vw]"> {/* column(profile pic + bio) */}
+            <div className="flex flex-col lg:flex-row justify-evenly md:items-center sm:items-center py-10"> {/* row[column(profile pic + bio), technologies grid] */}
+                <div className="flex flex-col items-center flex-wrap justify-center mb-[50px] lg:mb-0 max-w-[66vw] lg:max-w-[33vw]"> {/* column(profile pic + bio) */}
                     <div className="flex justify-center">
                         <Image 
                             className="rounded-md"
@@ -18,11 +18,11 @@ export default function Page() {
                             height="250"
                         />
                     </div> {/* profile pic */}
-                    <div className="flex flex-col pt-[40px] text-[16px] font-[family-name:var(--font-roboto-sans)]"> {/* bio */}
+                    <div className="pt-[40px] text-[16px] font-[family-name:var(--font-roboto-sans)]"> {/* bio */}
                         <p>
                             Hello! I'm Alvin, and (depending on who you ask) I am a software engineer, biomedical engineer, neuroscientist, 
                             and/or musician. I enjoy wearing a lot of different hats, tackling interesting problems, and learning by doing and building.
-                            Some of the technologies, languages, and frameworks I have used to do so are on the right.
+                            Some of the technologies, languages, and frameworks I have used to do so are on this page.
                         </p>
                         <br/>
                         <p>
@@ -58,7 +58,7 @@ export default function Page() {
                         </p>
                     </div>
                 </div>
-                <div className="flex flex-col justify-center items-center max-w-[30vw]"> {/* technologies grid */}
+                <div className="flex flex-col justify-center items-center max-w-[75vw] lg:max-w-[30vw]"> {/* technologies grid */}
                     <TechGrid /> {/* Technologies grid */}
                 </div>
             </div>

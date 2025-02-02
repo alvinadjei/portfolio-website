@@ -9,25 +9,27 @@ const github = [<LuGithub />, "alvinadjei", "GitHub", "https://github.com/alvina
 const cards = [
     email,
     linkedin,
-    github,
+    github, 
+    
 ];
 
 export default function Page() {
     return (
-        <div className="page-bounds">
+        <div className="lg:block flex flex-col items-center page-bounds">
             <h1 className="page-title">contact</h1>
             <hr className="page-title-line"></hr>
-            <div className="flex justify-evenly pt-10">
+            <ul className="flex flex-col lg:flex-row lg:flex-wrap justify-evenly pt-[30px]">
                 {cards.map((card, index) => (
-                    <ContactCard
-                        key={index} 
-                        logo={card[0]}
-                        handle={card[1]}
-                        platform={card[2]}
-                        link={card[3]}
-                    />
+                    <li key={index}>
+                        <ContactCard
+                            logo={card[0]}
+                            handle={card[1]}
+                            platform={card[2]}
+                            link={card[3]}
+                        />
+                    </li>
                 ))}
-            </div>
+            </ul>
         </div>
     );
 }

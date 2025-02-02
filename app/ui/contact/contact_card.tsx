@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function ContactCard({ logo, handle, platform, link }) {
     return (
-        <div className="flex flex-col justify-center w-[250px] h-[275px] p-5 border border-emerald-600 rounded-sm text-emerald-600 hover:text-tiel hover:border-tiel transition">
+        <div className="flex flex-col justify-center w-[250px] h-[275px] p-5 m-[20px] lg:m-[50px] border border-emerald-600 rounded-sm text-emerald-600 hover:text-tiel hover:border-tiel transition">
             <a
                 className="hover:text-tiel"
                 href={link}

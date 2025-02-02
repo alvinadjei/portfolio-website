@@ -27,7 +27,7 @@
     }
 
     .page-bounds { /* Page bounds */
-        @apply flex flex-col w-auto py-[30px] px-[10%]
+        @apply flex flex-col w-auto py-[10px] lg:px-[10%]
     }
 
 }
