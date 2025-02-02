@@ -28,27 +28,27 @@ export default function FeaturedProject({ num, title, description, technologies,
                     <ProjectLinks github={links[0]} link={links[1]} isEven={isEven} />
                 </div>
             </div>
-                <div className="lg:hidden flex justify-center items-center w-[90vw] sm:w-[576px] hover:shadow-2xl rounded-md relative"
-                    style={{
-                        backgroundImage: `url('${image}')`, 
-                        backgroundSize: "cover", 
-                        backgroundPosition: "center", 
-                        backgroundRepeat: "no-repeat", 
-                    }}
-                >
-                    <div 
-                        className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-background opacity-80 rounded-md"
-                    />
-                    <div 
-                        className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-tiel opacity-20 rounded"
-                    />
-                    <div className="px-[20px] py-[30px] z-10 text-lightgrey w-[95%]">
-                        <ProjectTitle title={title} links={links} />
-                        <ProjectDescription description={description} isEven={false} />
-                        <ProjectTechnologies technologies={technologies} isEven={false} />
-                        <ProjectLinks github={links[0]} link={links[1]} isEven={false} />
-                    </div>
+            <div className="lg:hidden flex justify-start items-center w-[90vw] sm:w-[576px] hover:shadow-2xl rounded-md relative"
+                style={{
+                    backgroundImage: `url('${image}')`, 
+                    backgroundSize: "cover", 
+                    backgroundPosition: "center", 
+                    backgroundRepeat: "no-repeat", 
+                }}
+            >
+                <div 
+                    className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-background opacity-80 rounded-md"
+                />
+                <div 
+                    className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-tiel opacity-20 rounded"
+                />
+                <div className="flex flex-col items-start px-[20px] py-[30px] z-10 text-lightgrey w-[95%]">
+                    <ProjectTitle title={title} links={links} />
+                    <ProjectDescription description={description} isEven={false} />
+                    <ProjectTechnologies technologies={technologies} isEven={false} />
+                    <ProjectLinks github={links[0]} link={links[1]} isEven={false} />
                 </div>
+            </div>
         </>
     );
 }
@@ -67,7 +67,7 @@ const ProjectTitle = ({ title, links }: {title: string, links: Array<string>}) =
 );
 
 const ProjectDescription = ({ description, isEven }: { description: string, isEven: boolean }) => (
-    <div className={`text-wrap ${isEven ? "max-w-[95%] lg:bg-lightbg w-[400px] py-[20px] lg:p-[20px] lg:rounded-md lg:shadow-sm lg:hover:shadow-xl" : "lg:bg-lightbg w-[400px] p-[20px] lg:rounded-md lg:shadow-sm lg:hover:shadow-lg lg:text-right"}`}>
+    <div className={`text-wrap p-[20px] max-w-[100%] ${isEven ? "lg:bg-lightbg lg:w-[400px] lg:py-[20px] lg:rounded-md lg:shadow-sm lg:hover:shadow-xl" : "lg:bg-lightbg w-[400px] lg:rounded-md lg:shadow-sm lg:hover:shadow-lg lg:text-right"}`}>
         {description}
     </div>
 );
