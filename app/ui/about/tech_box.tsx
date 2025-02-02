@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function TechBox({ logo }) {
+export default function TechBox({ logo }: {logo:string}) {
 
     const src = `/logos/${logo}.svg`;
     const alt = logo.replace(/-/g, '.').replace('Sharp', "#").replace('PP', '++');
