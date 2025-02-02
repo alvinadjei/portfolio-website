@@ -24,7 +24,7 @@ export default function Page() {
                     </div> {/* profile pic */}
                     <div className="pt-[40px] text-[16px] font-[family-name:var(--font-roboto-sans)]"> {/* bio */}
                         <p>
-                            Hello! I'm Alvin, and (depending on who you ask) I am a software engineer, biomedical engineer, neuroscientist, 
+                            Hello! I&apos;m Alvin, and (depending on who you ask) I am a software engineer, biomedical engineer, neuroscientist, 
                             and/or musician. I enjoy wearing a lot of different hats, tackling interesting problems, and learning by doing and building.
                             Some of the technologies, languages, and frameworks I have used to do so are on this page.
                         </p>

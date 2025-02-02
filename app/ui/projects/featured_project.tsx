@@ -1,6 +1,4 @@
-import Link from "next/link";
 import Image from "next/image";
-import { IconContext } from "react-icons";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 
 export default function FeaturedProject({ num, title, description, technologies, links, image }) {

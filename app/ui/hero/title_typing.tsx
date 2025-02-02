@@ -50,7 +50,7 @@ export default function TypingEffect() {
 
   return (
     <p className="text-xl text-lightgrey font-['Roboto_Mono']">
-      and I'm a<span className="text-teal-500">{text}</span>
+      and I&apos;m a<span className="text-teal-500">{text}</span>
       {blink && <span className="text-teal-500">_</span>}
     </p>
   );
