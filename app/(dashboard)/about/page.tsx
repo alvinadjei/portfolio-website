@@ -1,5 +1,4 @@
 import TechGrid from "@/app/ui/about/tech_grid";
-import NavBar from "@/app/ui/dashboard/navbar";
 import Image from "next/image";
 import { Metadata } from 'next';
 

@@ -15,7 +15,6 @@ const cards = [
     email,
     linkedin,
     github, 
-    
 ];
 
 export default function Page() {

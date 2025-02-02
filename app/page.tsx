@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import TypingEffect from "@/app/ui/hero/title_typing";
 import '@/app/ui/global.css';
