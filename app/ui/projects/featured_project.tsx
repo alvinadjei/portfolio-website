@@ -44,16 +44,16 @@ export default function FeaturedProject({ num, title, description, technologies,
                     />
                     <div className="px-[20px] py-[30px] z-10 text-lightgrey w-[95%]">
                         <ProjectTitle title={title} links={links} />
-                        <ProjectDescription description={description} isEven={1} />
-                        <ProjectTechnologies technologies={technologies} isEven={1} />
-                        <ProjectLinks github={links[0]} link={links[1]} isEven={1} />
+                        <ProjectDescription description={description} isEven={false} />
+                        <ProjectTechnologies technologies={technologies} isEven={false} />
+                        <ProjectLinks github={links[0]} link={links[1]} isEven={false} />
                     </div>
                 </div>
         </>
     );
 }
 
-const ProjectTitle = ({ title, links }) => (
+const ProjectTitle = ({ title, links }: {title: string, links: Array<string>}) => (
     <h2 className="pb-[10px] text-[25px] text-gray-200">
         <a 
             className="hover:text-tiel"
@@ -66,13 +66,13 @@ const ProjectTitle = ({ title, links }) => (
     </h2>
 );
 
-const ProjectDescription = ({ description, isEven }: { description: string, isEven: number }) => (
+const ProjectDescription = ({ description, isEven }: { description: string, isEven: boolean }) => (
     <div className={`text-wrap ${isEven ? "max-w-[95%] lg:bg-lightbg w-[400px] py-[20px] lg:p-[20px] lg:rounded-md lg:shadow-sm lg:hover:shadow-xl" : "lg:bg-lightbg w-[400px] p-[20px] lg:rounded-md lg:shadow-sm lg:hover:shadow-lg lg:text-right"}`}>
         {description}
     </div>
 );
 
-const ProjectTechnologies = ({ technologies, isEven }: { technologies: Array<string>, isEven: number }) => (
+const ProjectTechnologies = ({ technologies, isEven }: { technologies: Array<string>, isEven: boolean }) => (
     <ul className="flex justify-left py-[10px] text-[15px] font-[family-name:var(--font-roboto-mono)]">
         {technologies.map((tech, index) => (
             <li
@@ -85,7 +85,7 @@ const ProjectTechnologies = ({ technologies, isEven }: { technologies: Array<str
     </ul>
 );
 
-const ProjectLinks = ({ github, link, isEven }: { github: string, link: string, isEven: number}) => (
+const ProjectLinks = ({ github, link, isEven }: { github: string, link: string, isEven: boolean}) => (
     <ul className="flex pt-[10px] text-gray-200 text-[20px]">
         <li className={isEven? "pr-[20px]" : "pr-[20px] lg:pr-0"}>
             <a 
