@@ -5,10 +5,7 @@ import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
 import Image from "next/image";
 
-
 const links = ["about", "projects", "contact"]
-
-// TODO: Implement for loops w/ items
 
 export default function NavBar() {
     return (
@@ -45,7 +42,7 @@ function NavBarLinks() {
     );      
 }
 
-const NavBarLink = ({ link, pathname }) => (
+const NavBarLink = ({ link, pathname }: {link: string, pathname: string}) => (
     <Link 
         className={clsx("navbar-link", {'text-tiel':'/'+link === pathname})}
         href={`/${link}`}

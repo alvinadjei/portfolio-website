@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 
-export default function FeaturedProject({ num, title, description, technologies, links, image }) {
+export default function FeaturedProject({ num, title, description, technologies, links, image }: {num: number, title: string, description: string, technologies: Array<string>, links: Array<string>, image: string}) {
     const isEven = num % 2 === 0;
     return (
         <>

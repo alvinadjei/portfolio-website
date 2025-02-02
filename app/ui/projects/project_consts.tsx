@@ -13,7 +13,7 @@ const proj2 = {
         to blink in response to an airpuff to the eye sent after a musical tone while saving the fraction of eye closure. Includes 
         GUI to control experiment parameters and run experiment.`,
     "technologies": ["Python", "Arduino", "OpenCV",],
-    "links": ["https://github.com/alvinadjei/Eyeblink", null],
+    "links": ["https://github.com/alvinadjei/Eyeblink", ""],
     "image": "/projects/eyeblink.jpeg",
 };
 const proj3 = {
@@ -21,7 +21,7 @@ const proj3 = {
     "description": `A 3D rendering of the Solar System built with Unity. Fly around and explore the solar system,
         complete with planets, the Sun, and Earth's moon rotating and orbiting at relative speeds.`,
     "technologies": ["Unity", "C#",],
-    "links": ["https://github.com/alvinadjei/3D-Solar-System-Model", null],
+    "links": ["https://github.com/alvinadjei/3D-Solar-System-Model", ""],
     "image": "/projects/solar_system.png",
 };
 const proj4 = {
@@ -45,7 +45,7 @@ const proj6 = {
     "title": "Portfolio Website",
     "description": `A responsive portfolio website containing my information, past experience, and projects. Built with Next.js and TailwindCSS.`,
     "technologies": ["Next.js", "TailwindCSS",],
-    "links": ["https://github.com/alvinadjei/portfolio-website", null],
+    "links": ["https://github.com/alvinadjei/portfolio-website", ""],
     "image": "/projects/portfolio_website.png",
 };
 
