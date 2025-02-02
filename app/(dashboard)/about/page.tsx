@@ -1,19 +1,24 @@
 import TechGrid from "@/app/ui/about/tech_grid";
 import NavBar from "@/app/ui/dashboard/navbar";
 import Image from "next/image";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'About',
+};
 
 export default function Page() {
     return (
         <div className="lg:block flex flex-col items-center"> {/* flex column containing all page elements */}
             <h1 className="page-title">about me </h1>
             <hr className="page-title-line"></hr>
-            <div className="flex flex-col lg:flex-row justify-evenly md:items-center sm:items-center py-10"> {/* row[column(profile pic + bio), technologies grid] */}
+            <div className="flex flex-col lg:flex-row justify-evenly items-center py-10"> {/* row[column(profile pic + bio), technologies grid] */}
                 <div className="flex flex-col items-center flex-wrap justify-center mb-[50px] lg:mb-0 max-w-[66vw] lg:max-w-[33vw]"> {/* column(profile pic + bio) */}
                     <div className="flex justify-center">
                         <Image 
                             className="rounded-md"
                             src="/profile_pic.jpeg"
-                            alt="Profile pic"
+                            alt="Alvin's profile pic"
                             width="302"
                             height="250"
                         />
@@ -47,14 +52,14 @@ export default function Page() {
                         <p>
                             In my free time I enjoy scoring own-goals in my Volo soccer league, 
                             cooking various types of soup, letting my roommmates think I'm bad at Mario Kart
-                            (for now), singing in&nbsp;
+                            (for now), singing in and writing arrangements for&nbsp;
                             <a
                                 href="https://www.instagram.com/vocalchordsatucsf/"
                                 target="_blank"
                                 className="underline text-tiel hover:text-emerald-400"
-                            >UCSF's a cappella group, the Vocal Chords
+                            >the UCSF a cappella group
                             </a>, 
-                            and exploring nature in and around San Francisco in the hopes of catching and taming a coyote.
+                            and exploring nature in and around San Francisco in the hopes of catching and taming a wild coyote.
                         </p>
                     </div>
                 </div>

@@ -1,5 +1,10 @@
 import FeaturedProject from "@/app/ui/projects/featured_project";
 import { projects } from "../../ui/projects/project_consts";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'Projects',
+};
 
 export default function Page() {
     return (

@@ -43,7 +43,7 @@ const proj5 = {
 };
 const proj6 = {
     "title": "Portfolio Website",
-    "description": `A website containing my information, past experience, and projects. Built with Next.js and TailwindCSS.`,
+    "description": `A responsive portfolio website containing my information, past experience, and projects. Built with Next.js and TailwindCSS.`,
     "technologies": ["Next.js", "TailwindCSS",],
     "links": ["https://github.com/alvinadjei/portfolio-website", null],
     "image": "/projects/portfolio_website.png",

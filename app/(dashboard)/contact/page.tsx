@@ -1,6 +1,11 @@
 import ContactCard from "@/app/ui/contact/contact_card";
 import { LuLinkedin, LuGithub } from "react-icons/lu";
 import { MdOutlineEmail } from "react-icons/md";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'Contact',
+};
 
 const email = [<MdOutlineEmail />, "alvinadjei@alumni.harvard.edu", "Email", "mailto:alvinadjei@alumni.harvard.edu"];
 const linkedin = [ <LuLinkedin />,  "@alvin-adjei", "LinkedIn", "https://www.linkedin.com/in/alvin-adjei/"];

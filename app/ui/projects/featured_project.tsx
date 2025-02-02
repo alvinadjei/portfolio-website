@@ -30,8 +30,7 @@ export default function FeaturedProject({ num, title, description, technologies,
                     <ProjectLinks github={links[0]} link={links[1]} isEven={isEven} />
                 </div>
             </div>
-            <div className="lg:hidden hover:shadow-2xl rounded-md relative">
-                <div className="flex justify-center items-center"
+                <div className="lg:hidden flex justify-center items-center w-[90vw] sm:w-[576px] hover:shadow-2xl rounded-md relative"
                     style={{
                         backgroundImage: `url('${image}')`, 
                         backgroundSize: "cover", 
@@ -40,19 +39,18 @@ export default function FeaturedProject({ num, title, description, technologies,
                     }}
                 >
                     <div 
-                        className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-background opacity-65 rounded-md"
+                        className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-background opacity-80 rounded-md"
                     />
                     <div 
-                        className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-tiel opacity-30 rounded"
+                        className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-tiel opacity-20 rounded"
                     />
-                    <div className="py-[10px] z-10 text-light w-[95%]">
+                    <div className="px-[20px] py-[30px] z-10 text-lightgrey w-[95%]">
                         <ProjectTitle title={title} links={links} />
                         <ProjectDescription description={description} isEven={1} />
                         <ProjectTechnologies technologies={technologies} isEven={1} />
                         <ProjectLinks github={links[0]} link={links[1]} isEven={1} />
                     </div>
                 </div>
-            </div>
         </>
     );
 }
