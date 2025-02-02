@@ -66,13 +66,13 @@ const ProjectTitle = ({ title, links }) => (
     </h2>
 );
 
-const ProjectDescription = ({ description, isEven }) => (
+const ProjectDescription = ({ description, isEven }: { description: string, isEven: number }) => (
     <div className={`text-wrap ${isEven ? "max-w-[95%] lg:bg-lightbg w-[400px] py-[20px] lg:p-[20px] lg:rounded-md lg:shadow-sm lg:hover:shadow-xl" : "lg:bg-lightbg w-[400px] p-[20px] lg:rounded-md lg:shadow-sm lg:hover:shadow-lg lg:text-right"}`}>
         {description}
     </div>
 );
 
-const ProjectTechnologies = ({ technologies, isEven }) => (
+const ProjectTechnologies = ({ technologies, isEven }: { technologies: Array<string>, isEven: number }) => (
     <ul className="flex justify-left py-[10px] text-[15px] font-[family-name:var(--font-roboto-mono)]">
         {technologies.map((tech, index) => (
             <li
@@ -85,7 +85,7 @@ const ProjectTechnologies = ({ technologies, isEven }) => (
     </ul>
 );
 
-const ProjectLinks = ({ github, link, isEven }) => (
+const ProjectLinks = ({ github, link, isEven }: { github: string, link: string, isEven: number}) => (
     <ul className="flex pt-[10px] text-gray-200 text-[20px]">
         <li className={isEven? "pr-[20px]" : "pr-[20px] lg:pr-0"}>
             <a 
