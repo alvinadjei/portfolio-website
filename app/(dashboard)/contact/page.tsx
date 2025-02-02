@@ -1,21 +1,10 @@
 import ContactCard from "@/app/ui/contact/contact_card";
-import { LuLinkedin, LuGithub } from "react-icons/lu";
-import { MdOutlineEmail } from "react-icons/md";
 import { Metadata } from 'next';
+import { cards } from "./contact_consts";
 
 export const metadata: Metadata = {
     title: 'Contact',
 };
-
-const email = [<MdOutlineEmail />, "alvinadjei@alumni.harvard.edu", "Email", "mailto:alvinadjei@alumni.harvard.edu"];
-const linkedin = [ <LuLinkedin />,  "@alvin-adjei", "LinkedIn", "https://www.linkedin.com/in/alvin-adjei/"];
-const github = [<LuGithub />, "alvinadjei", "GitHub", "https://github.com/alvinadjei"];
-
-const cards = [
-    email,
-    linkedin,
-    github, 
-];
 
 export default function Page() {
     return (
@@ -26,10 +15,10 @@ export default function Page() {
                 {cards.map((card, index) => (
                     <li key={index}>
                         <ContactCard
-                            logo={card[0]}
-                            handle={card[1]}
-                            platform={card[2]}
-                            link={card[3]}
+                            logo={card.logo}
+                            handle={card.handle}
+                            platform={card.platform}
+                            link={card.link}
                         />
                     </li>
                 ))}
