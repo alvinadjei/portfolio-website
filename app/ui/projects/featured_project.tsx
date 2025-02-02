@@ -86,7 +86,7 @@ const ProjectTechnologies = ({ technologies, isEven }: { technologies: Array<str
 );
 
 const ProjectLinks = ({ github, link, isEven }: { github: string, link: string, isEven: boolean}) => (
-    <ul className="flex pt-[10px] text-gray-200 text-[20px]">
+    <ul className="flex pt-[10px] text-gray-200 text-[20px] max-w-[100%]">
         <li className={isEven? "pr-[20px]" : "pr-[20px] lg:pr-0"}>
             <a 
                 className="hover:text-tiel"
