@@ -20,11 +20,11 @@ export default function NavBar() {
                 <Image 
                     src="/favicon.png"
                     alt="Logo"
-                    width="100"
-                    height="100"
+                    width="75"
+                    height="75"
                 />
             </Link>
-            <nav className="">
+            <nav className="pr-10">
                 <NavBarLinks />
             </nav>
         </header>

@@ -9,7 +9,7 @@
     }
     
     .navbar-logo { /* Nav Bar logo */
-        @apply cursor-pointer mr-auto;
+        @apply cursor-pointer pl-[10px] mr-auto;
     }
     
     .navbar-link { /* Links in Nav Bar */
