@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 
 const words = [
-  " fullstack software engineer",
+  " full-stack software engineer",
   " biomedical engineer",
   " musician",
   " fantasy football champion",
