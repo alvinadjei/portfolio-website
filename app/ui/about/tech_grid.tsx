@@ -4,8 +4,8 @@ const images = [
                     "Python", "MySQL", "Git", 
                     "JavaScript", "HTML", "CSS", 
                     "React", "Next-js", "Flutter", 
-                    "Arduino", "Raspberry Pi", "CPP", 
-                    "Unity", "MATLAB", "AWS", 
+                    "C", "MATLAB", "AWS", 
+                    "Arduino", "Raspberry Pi", "Unity", 
                ];
 
 export default function TechGrid() {
