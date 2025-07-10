@@ -3,13 +3,13 @@ import Image from "next/image";
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'About',
+    title: 'Blog',
 };
 
 export default function Page() {
     return (
         <div className="lg:block flex flex-col items-center page-bounds"> {/* flex column containing all page elements */}
-            <h1 className="page-title">about me </h1>
+            <h1 className="page-title">cranial window </h1>
             <hr className="page-title-line"></hr>
             <div className="flex flex-col lg:flex-row justify-evenly items-center py-10"> {/* row[column(profile pic + bio), technologies grid] */}
                 <div className="flex flex-col items-center flex-wrap justify-center mb-[50px] lg:mb-0 max-w-[66vw] lg:max-w-[33vw]"> {/* column(profile pic + bio) */}
