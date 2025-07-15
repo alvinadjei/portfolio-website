@@ -30,4 +30,28 @@
         @apply flex flex-col w-auto py-[10px] lg:px-[10%]
     }
 
+    .article {
+        @apply mt-6 flex flex-col gap-3 font-[family-name:var(--font-roboto-mono)] tracking-wide mb-20
+    }
+
+    .article > h1 {
+        @apply text-4xl tracking-tight
+    }
+
+    .article > h2 {
+        @apply text-3xl tracking-tight
+    }
+
+    .article > h3 {
+        @apply text-2xl tracking-tight
+    }
+
+    .article > ol {
+        @apply list-decimal flex flex-col mx-10 gap-2
+    }
+
+    .article > ul {
+        @apply list-disc flex flex-col mx-10 gap-2
+    }
+
 }
