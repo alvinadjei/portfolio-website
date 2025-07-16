@@ -11,18 +11,18 @@ const components = {
   Link,
 };
 
-export function generateStaticParams() {
+export async function generateStaticParams(): Promise<{ slug: string }[]> {
   const slugs = getArticleSlugs();
   return slugs.map((slug) => ({ slug }));
 }
 
-export default function BlogPostPage({ params }: BlogPageProps) {
+export default async function BlogPostPage({ params }: BlogPageProps) {
   const { slug } = params;
 
   const allSlugs = getArticleSlugs();
   if (!allSlugs.includes(slug)) notFound();
 
-  const { frontmatter, content } = getMdxSource(slug);
+  const { frontmatter, content } = await getMdxSource(slug);
 
   return (
     <main className="px-[10%] lg:px-[25%] mx-auto font-[family-name:var(--font-roboto-mono)]">
