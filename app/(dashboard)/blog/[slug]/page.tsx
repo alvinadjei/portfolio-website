@@ -22,7 +22,7 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
   const allSlugs = getArticleSlugs();
   if (!allSlugs.includes(slug)) notFound();
 
-  const { frontmatter, content } = getMdxSource(slug);
+  const { frontmatter, content } = await getMdxSource(slug);
 
   return (
     <main className="px-[10%] lg:px-[25%] mx-auto font-[family-name:var(--font-roboto-mono)]">
