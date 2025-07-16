@@ -25,6 +25,7 @@ export default function BlogIndexPage() {
         <div className="lg:block flex flex-col items-center page-bounds"> {/* flex column containing all page elements */}
             <h1 className="page-title">cranial window </h1>
             <hr className="page-title-line"></hr>
+            <h1 className="text-2xl font my-6 text-gray-400">a direct glimpse of my thoughts, every now and then</h1>
         </div>
         <ul className="my-5">
             {articles.map(({ slug, frontmatter }) => (

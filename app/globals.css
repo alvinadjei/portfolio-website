@@ -33,6 +33,10 @@
     .article {
         @apply mt-6 flex flex-col gap-3 font-[family-name:var(--font-roboto-mono)] tracking-wide mb-20
     }
+    
+    .article > p {
+        @apply leading-7
+    }
 
     .article > h1 {
         @apply text-3xl tracking-tight
@@ -49,5 +53,4 @@
     .article > ul {
         @apply list-disc flex flex-col mx-10 gap-2
     }
-
 }
