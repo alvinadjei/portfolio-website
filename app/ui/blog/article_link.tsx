@@ -13,11 +13,11 @@ export default function ArticleLink({ slug, title, date, summary, tags }: Articl
   return (
     <li className="flex justify-center mb-6">
         <div className="flex flex-col w-[100%] my-4 mx-[5%] lg:mx-[30%]">
-            <div>
+            <div className="flex flex-col gap-1 md:block">
                 <Link href={`/blog/${slug}`} className="text-2xl tracking-tight font-semibold hover:text-tiel">
                     {title}
                 </Link>
-                 &nbsp; &nbsp;
+                <span className="hidden md:inline">&nbsp; &nbsp;</span>
                 <span className="text-gray-300">{new Date(date).toLocaleDateString()}</span>
             </div>
             {summary && <p className="text-gray-200 mt-1">{summary}</p>}

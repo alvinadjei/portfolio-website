@@ -26,7 +26,7 @@ export default async function BlogPostPage({ params: rawParams }: BlogPageProps)
   const { frontmatter, content } = await getMdxSource(slug);
 
   return (
-    <main className="px-[10%] lg:px-[25%] mx-auto font-[family-name:var(--font-roboto-mono)]">
+    <main className="px-[5%] lg:px-[25%] mx-auto font-[family-name:var(--font-roboto-mono)]">
       <h1 className="text-4xl text-tiel font-bold mb-4">{frontmatter.title}</h1>
       <span className="text-md text-gray-300">{frontmatter.date}</span>
       <ul className="flex mt-1 mb-3 text-sm gap-4 text-gray-400">
