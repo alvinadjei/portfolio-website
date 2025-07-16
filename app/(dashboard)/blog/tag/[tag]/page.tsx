@@ -3,7 +3,7 @@ import { getArticleSlugs, getArticleBySlug, Frontmatter } from '@/app/lib/articl
 import { notFound } from 'next/navigation';
 
 interface TagPageProps {
-  params: { tag: string };
+  params: Promise<{ tag: string }>;
 }
 
 interface ArticleSummary {
@@ -11,7 +11,7 @@ interface ArticleSummary {
   frontmatter: Frontmatter;
 }
 
-export function generateStaticParams() {
+export async function generateStaticParams(): Promise<{ tag: string }[]> {
   const slugs = getArticleSlugs();
   const tagsSet = new Set<string>();
 
@@ -23,7 +23,9 @@ export function generateStaticParams() {
   return Array.from(tagsSet).map((tag) => ({ tag }));
 }
 
-export default function TagPage({ params }: TagPageProps) {
+export default async function TagPage({ params: rawParams }: TagPageProps) {
+  // Await the params to get the actual object
+  const params = await rawParams;
   const tag = params.tag.toLowerCase();
 
   const articles: ArticleSummary[] = getArticleSlugs()

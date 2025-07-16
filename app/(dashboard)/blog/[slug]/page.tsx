@@ -4,7 +4,7 @@ import { MDXRemote } from 'next-mdx-remote/rsc';
 import Link from 'next/link';
 
 interface BlogPageProps {
-  params: { slug: string };
+  params: Promise<{ slug: string }>; // params is a Promise
 }
 
 const components = {
@@ -16,7 +16,8 @@ export async function generateStaticParams(): Promise<{ slug: string }[]> {
   return slugs.map((slug) => ({ slug }));
 }
 
-export default async function BlogPostPage({ params }: BlogPageProps) {
+export default async function BlogPostPage({ params: rawParams }: BlogPageProps) {
+  const params = await rawParams
   const { slug } = params;
 
   const allSlugs = getArticleSlugs();
