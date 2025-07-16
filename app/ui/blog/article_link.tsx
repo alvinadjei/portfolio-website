@@ -14,7 +14,7 @@ export default function ArticleLink({ slug, title, date, summary, tags }: Articl
     <li className="flex justify-center mb-6">
         <div className="flex flex-col w-[100%] my-4 mx-[5%] lg:mx-[30%]">
             <div>
-                <Link href={`/blog/${slug}`} className="text-2xl tracking-tight font-semibold underline hover:text-tiel">
+                <Link href={`/blog/${slug}`} className="text-2xl tracking-tight font-semibold hover:text-tiel">
                     {title}
                 </Link>
                  &nbsp; &nbsp;
