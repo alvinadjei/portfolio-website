@@ -18,7 +18,7 @@ export default function ArticleLink({ slug, title, date, summary, tags }: Articl
                     {title}
                 </Link>
                 <span className="hidden md:inline">&nbsp; &nbsp;</span>
-                <span className="text-gray-300">{new Date(date).toLocaleDateString()}</span>
+                <span className="text-gray-300">{date}</span>
             </div>
             {summary && <p className="text-gray-200 mt-1">{summary}</p>}
             <ul className="flex mt-2 mb-3 text-sm gap-4 text-gray-400">
