@@ -44,7 +44,7 @@ function NavBarLinks() {
 
 const NavBarLink = ({ link, pathname }: {link: string, pathname: string}) => (
     <Link 
-        className={clsx("navbar-link", {'text-tiel':'/'+link === pathname})}
+        className={clsx("navbar-link", {'text-tiel':pathname.includes('/'+link)})}
         href={`/${link}`}
     >
         {link}

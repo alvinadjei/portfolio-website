@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import { getArticleSlugs, getMdxSource, Frontmatter } from '@/app/lib/articles';
 import { MDXRemote } from 'next-mdx-remote/rsc';
+import Link from 'next/link';
 
 interface BlogPageProps {
   params: { slug: string };
@@ -20,13 +21,18 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
   const { frontmatter, content } = getMdxSource(slug);
 
   return (
-    <main className="p-8 max-w-2xl mx-auto font-[family-name:var(--font-roboto-mono)]">
-      <h1 className="text-4xl font-bold mb-4">{frontmatter.title}</h1>
+    <main className="px-[10%] lg:px-[25%] mx-auto font-[family-name:var(--font-roboto-mono)]">
+      <h1 className="text-4xl text-tiel font-bold mb-4">{frontmatter.title}</h1>
       <span className="text-md text-gray-400">{frontmatter.date}</span>
       <ul className="flex mt-1 mb-3 text-sm gap-4 text-gray-400">
         {frontmatter.tags.map((tag, index) => (
                             <li key={index}>
-                                #{tag}
+                                <Link 
+                                    href={`/blog/tag/${tag.toLowerCase()}`}
+                                    className="hover:text-tiel"
+                                >
+                                    #{tag}
+                                </Link>
                             </li>
                         ))}
       </ul>
