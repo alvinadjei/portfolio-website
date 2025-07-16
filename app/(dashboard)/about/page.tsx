@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
     return (
-        <div className="lg:block flex flex-col items-center"> {/* flex column containing all page elements */}
+        <div className="lg:block flex flex-col items-center page-bounds"> {/* flex column containing all page elements */}
             <h1 className="page-title">about me </h1>
             <hr className="page-title-line"></hr>
             <div className="flex flex-col lg:flex-row justify-evenly items-center py-10"> {/* row[column(profile pic + bio), technologies grid] */}
