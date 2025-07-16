@@ -17,7 +17,7 @@ export async function generateStaticParams() {
 }
 
 export default async function BlogPostPage({ params }: BlogPageProps) {
-  const { slug } = await params;
+  const { slug } = params;
 
   const allSlugs = getArticleSlugs();
   if (!allSlugs.includes(slug)) notFound();
